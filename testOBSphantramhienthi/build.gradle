@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    implementation group: 'org.testng', name: 'testng', version: '7.5'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.13.0'
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.2'
+//    // https://mvnrepository.com/artifact/de.openkeyword/autoit
+//    implementation 'de.openkeyword:autoit:0.2.44'
+//    // https://mvnrepository.com/artifact/net.sf.jacob-project/jacob
+//    implementation 'net.sf.jacob-project:jacob:1.14.3'
+    // https://mvnrepository.com/artifact/com.sikulix/sikulixapi
+    implementation 'com.sikulix:sikulixapi:2.0.5'
+
+}
+
+test {
+    useJUnitPlatform()
+}
